@@ -20,7 +20,5 @@ class Generosity(BaseModel):
 class PerceptionsOfCorruption(BaseModel):
     perceptions_of_corruption: Optional[float] = Field(None,description="Perceptions of corruption of the country")
 
-class CountryRankOnSpecificMetric(BaseModel):
-    metric: Optional[str] = Field(None,description="Metric to rank the country by, these are available metrics : score, gdp_per_capita, social_support, healthy_life_expectancy, freedom_to_make_life_choices, generosity, perceptions_of_corruption")
-    k: Optional[int] = Field(None,description="Number of countries to return")
-    ascending: Optional[bool] = Field(None,description="Ascending or descending order")
+class Continent(BaseModel):
+    continent: Optional[str] = Field(None,description="Continent of the country")
